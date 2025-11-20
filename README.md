@@ -1,74 +1,48 @@
-Doom-Arduino — Top-Down Shooter inspirado em Doom
+# Doom-Arduino (Doom-like top-down shooter)
 
-Este projeto é um jogo estilo Doom (top-down shooter) desenvolvido para Arduino + OLED SSD1306, com player, inimigos simples, mapa em tiles e sistema de tiro.
-Não é o Doom original, mas sim uma versão inspirada, otimizada para rodar em microcontroladores de baixa memória.
+**Descrição**
+Projeto *inspirado* em Doom — uma versão simplificada top-down shooter para Arduino com display OLED 128×64 (SSD1306).  
+**Importante:** isto **não** é o jogo Doom original (por razões técnicas e de direitos autorais). É um jogo inspirado: mapa em tiles, jogador, inimigos simples e tiros.
 
-🎮 Funcionalidades
+**Hardware alvo**
+- Arduino UNO / Nano / Pro Micro / ESP32 (pinos podem variar)
+- OLED SSD1306 128×64 (I2C)
+- Joystick analógico (ou 2 potenciômetros)
+- Botão de disparo
+- Fios e breadboard
 
-Movimentação do jogador via joystick
+**Bibliotecas necessárias**
+- Adafruit SSD1306
+- Adafruit GFX
 
-Disparo usando botão físico
+Instale via Library Manager do Arduino IDE:
+`Adafruit SSD1306` e `Adafruit GFX Library`
 
-Inimigos com movimento simples
+**Como usar**
+1. Abra `doom_arduino.ino` no Arduino IDE.
+2. Ajuste os pinos do joystick e botão caso necessário na seção `PIN CONFIG`.
+3. Selecione a placa correta e envie.
+4. Controle:
+   - Movimento: joystick analógico (X/Y) ou potenciômetros.
+   - Atirar: botão (pulldown/up conforme sua montagem).
 
-Renderização em 2D no OLED 128×64
+**Arquivo principal**
+- `doom_arduino.ino` — sketch Arduino com implementação do jogo.
 
-Mapa baseado em tiles
+**Licença**
+MIT — veja LICENSE.
 
-Game loop leve para rodar em Arduino UNO/Nano
+**Como subir no GitHub**
+1. Crie um novo repositório no GitHub (ex: `doom-arduino`).
+2. No terminal:
+```bash
+git init
+git add .
+git commit -m "Initial commit - Doom-like top-down shooter for Arduino"
+git branch -M main
+git remote add origin https://github.com/<seu-usuario>/<doom-arduino>.git
+git push -u origin main
+```
+(Substitua `<seu-usuario>` e `<doom-arduino>` pelo nome real.)
 
-🛠️ Hardware necessário
-
-Arduino UNO / Nano / Pro Micro (ou ESP32 para melhor desempenho)
-
-Display OLED SSD1306 (I2C)
-
-Joystick analógico (ou 2 potenciômetros)
-
-Botão de disparo
-
-Jumpers + breadboard
-
-📚 Bibliotecas utilizadas
-
-Instale via Arduino IDE:
-
-Adafruit GFX Library  
-Adafruit SSD1306
-
-📂 Estrutura do projeto
-doom_arduino/
-<br/>│── doom_arduino.ino
-<br/>│── README.md
-<br/>│── hardware.md
-<br/>└── LICENSE (MIT)
-
-▶️ Como rodar
-
-Abra o arquivo doom_arduino.ino no Arduino IDE.
-
-Instale as bibliotecas necessárias.
-
-Ajuste os pinos no início do código conforme seu hardware.
-
-Conecte o Arduino e faça upload.
-
-Aproveite o jogo! 🎮
-
-🔧 Ligações (resumo)
-
-OLED SSD1306: SDA → A4, SCL → A5 (Arduino UNO)
-
-Joystick: VRX → A0, VRY → A1
-
-Botão: pino digital (definido no código)
-
-Detalhes completos estão em hardware.md.
-
-📜 Licença
-
-Este projeto está sob a licença MIT — sinta-se livre para usar e modificar.
-
-🤝 Contribuições
-
-Pull requests são bem-vindos! Sugestões de melhorias, otimizações ou novas fases são super aceitas.
+Divirta-se e personalize o mapa, inimigos e mecânicas!
